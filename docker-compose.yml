@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+#  postgres:
+#    image: postgres:latest
+#    environment:
+#      POSTGRES_USER: postgres
+#      POSTGRES_PASSWORD: 9102003
+#      POSTGRES_DB: postgres
+#    ports:
+#      - "5434:5432"
+  user-demoacc:
+    #    image: latest
+    image: postgres:latest
+    depends_on:
+      - postgres
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345990
+      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 91020033
